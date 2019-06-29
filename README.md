@@ -1,12 +1,16 @@
 # sshs-vote-frontend-revised
 
-## Preparing
+Install npm and node.js first. Files for counting are in ./src and files for voting are in ./src/component.
 
-Install npm and node.js
+## Running App
 
 ```shell
-$ npm run build
-$ npm install -g serve
-$ serve -s build
+$ npm i -g create-react-app    
+$ create-react-app <directory> // create directory
+$ npm start                    // run app
 ```
-
+To run the code properly, install router-dom with
+```shell
+$ npm i react-router-dom
+```
+Then restart the app with `npm start`
