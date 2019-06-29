@@ -4,9 +4,9 @@
 
 Install npm and node.js
 
-'''shell
+```shell
 $ npm run build
 $ npm install -g serve
 $ serve -s build
-'''
+```
 
