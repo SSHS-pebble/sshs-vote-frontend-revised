@@ -26,7 +26,6 @@ module.exports = withToastManager(({ toastManager }) => {
         if(!formEl.current.reportValidity()) { return; }
         setLoading(true);
         try {
-            console.log({ id, vote });
             const res = await fetch("/api/vote", {
                 method: "post",
                 body: JSON.stringify({
@@ -38,7 +37,6 @@ module.exports = withToastManager(({ toastManager }) => {
                 }
             });
             const data = await res.json();
-            console.log(data);
             setLoading(false);
             if(!data.status) {
                 throw new Error(data.error);
