@@ -3,7 +3,7 @@
     "scripts": {
         "start": "parcel watch src/index.html -d dist",
         "build": "parcel build src/index.html -d dist",
-        "clean": "rm -r dist .cache"
+        "clean": "rm -rf dist .cache"
     },
     "dependencies": {
         "babel-polyfill": "^6.26.0",
