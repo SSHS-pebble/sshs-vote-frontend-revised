@@ -434,6 +434,13 @@ prop-types@^15.6.2:
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
+react-block-ui@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/react-block-ui/-/react-block-ui-1.1.4.tgz#5aeec1775cf6dbbd6d51a51109acbfcd678fcd64"
+  integrity sha512-gGAZowkBGxCfvmBYUWOy/RF8BDDDpo1ViK2lZxERFAY7PRbe1bD42pv/WtOLliCWlfJBDOgW3BJ1sJTYIpiclA==
+  dependencies:
+    prop-types "^15.6.2"
+
 react-bulma-components@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/react-bulma-components/-/react-bulma-components-2.3.0.tgz#a25fd8f57b5748b0969673dfbfd2cd9186287522"

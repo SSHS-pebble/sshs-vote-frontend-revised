@@ -7,8 +7,9 @@ const { ToastProvider } = require("react-toast-notifications");
 const { Section } = require("react-bulma-components");
 
 require("react-bulma-components/dist/react-bulma-components.min.css");
+require("react-block-ui/style.css");
 
-const { Hero, Main, Notification } = require("./components");
+const { Hero, Main, Notification, Count } = require("./components");
 
 const App = () => (
     <>
@@ -17,6 +18,7 @@ const App = () => (
                 <Hero />
                 <Section>
                     <Route exact path="/" component={Main} />
+                    <Route exact path="/count" component={Count} />
                 </Section>
             </ToastProvider>
         </Router>
