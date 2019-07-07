@@ -2,14 +2,18 @@ const React = require("react");
 const { useState, useEffect } = React;
 
 const {
-    Form,
     Button,
-    Image,
     Container,
     Columns,
+    Image,
     Progress
 } = require("react-bulma-components");
 const { default: BlockUi } = require("react-block-ui");
+
+const images = [
+    require("../../static/one.jpg"),
+    require("../../static/two.jpg")
+];
 
 module.exports = ({ ...props }) => {
     const [loading, setLoading] = useState(true);
@@ -46,9 +50,25 @@ module.exports = ({ ...props }) => {
     return (
         <Container>
             <BlockUi blocking={loading}>
-                <Progress color="info" max={totalStudents} value={votes[0]} />
-                <Progress color="link" max={totalStudents} value={votes[1]} />
-                <Button color="link" loading={voting} onClick={() => setVoting(true)}>개표</Button>
+                <Columns className="is-vcentered">
+                    <Columns.Column size={2}>
+                        <Image src={images[0]} />
+                    </Columns.Column>
+                    <Columns.Column>
+                        <Progress color="info" max={totalStudents} value={votes[0]} />
+                        {loading ? null : <p style={{ textAlign: "center" }}>{votes[0]} / {totalStudents} = {Math.trunc(votes[0] / totalStudents * 100)}%</p>}
+                    </Columns.Column>
+                </Columns>
+                <Columns className="is-vcentered">
+                    <Columns.Column size={2}>
+                        <Image src={images[1]} />
+                    </Columns.Column>
+                    <Columns.Column>
+                        <Progress color="link" max={totalStudents} value={votes[1]} />
+                        {loading ? null : <p style={{ textAlign: "center" }}>{votes[1]} / {totalStudents} = {Math.trunc(votes[1] / totalStudents * 100)}%</p>}
+                    </Columns.Column>
+                </Columns>
+                <Button color="link" loading={voting} onClick={() => setVoting(true)} pull="right">개표</Button>
             </BlockUi>
         </Container>
     );
