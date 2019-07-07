@@ -75,7 +75,7 @@ module.exports = withToastManager(({ toastManager }) => {
                         {images.map((src, idx) => (
                             <Columns.Column key={src}>
                                 <Image src={src} onClick={() => setVote(idx)} />
-                                <Form.Radio pull="right" name="vote" checked={idx == vote} onChange={() => setVote(idx)}>
+                                <Form.Radio name="vote" checked={idx == vote} onChange={() => setVote(idx)}>
                                     {" "}기호 {idx + 1}번
                                 </Form.Radio>
                             </Columns.Column>
