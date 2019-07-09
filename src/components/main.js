@@ -18,7 +18,7 @@ const images = [
 
 module.exports = withToastManager(({ toastManager }) => {
     const [id, setId] = useState("");
-    const [vote, setVote] = useState(0);
+    const [vote, setVote] = useState(-1);
     const [loading, setLoading] = useState(false);
     const formEl = useRef(null);
     const submit = async e => {
