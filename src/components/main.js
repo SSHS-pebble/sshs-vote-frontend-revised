@@ -13,7 +13,8 @@ const { withToastManager } = require("react-toast-notifications");
 const { InputField } = require("./helpers.js");
 const images = [
     require("../../static/one.jpg"),
-    require("../../static/two.jpg")
+    require("../../static/two.jpg"),
+    require("../../static/one.jpg")
 ];
 
 module.exports = withToastManager(({ toastManager }) => {
